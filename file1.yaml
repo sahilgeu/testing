@@ -1,7 +1,7 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata: 
-   name: mydeployment
+#   apiVersion: apps/v1
+# kind: Deployment
+# metadata: 
+#   name: mydeployment
    namespace: tst1
    labels:
       app: frontend
