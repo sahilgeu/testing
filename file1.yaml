@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+   name: mydeployment
+   namespace: tst1
+   labels:
+      app: frontend
+      env: test
+spec:
+  replicas: 4
+  selector:
+      matchLabels:
+        env: test
+  template:
+       metadata:
+         labels:
+           env: test
+       spec:
+         containers:
+            - name: c01
+              image: nginx
+              ports:
+                - containerPort: 443
